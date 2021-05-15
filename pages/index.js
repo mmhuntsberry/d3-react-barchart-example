@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import { ChartWrapper } from '../components/ChartWrapper'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import ChartWrapper from "../components/ChartWrapper";
+import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
@@ -14,8 +14,6 @@ export default function Home() {
       <main className={styles.main}>
         <ChartWrapper />
       </main>
-
-     
     </div>
-  )
+  );
 }

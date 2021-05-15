@@ -1,17 +1,17 @@
-import React, { useState, useRef, useEffect } from "react";
-import D3Chart from "./D3Chart";
+import React, { useRef, useState, useEffect } from "react";
+import D3Chart from "../Charts/D3Chart";
 
-export const ChartWrapper = () => {
+const ChartWrapper = () => {
+  const chartArea = useRef(null);
   const [chart, setChart] = useState(null);
-  const chartContainer = useRef(null);
 
   useEffect(() => {
     if (!chart) {
-      setChart(new D3Chart(chart));
-    } else {
-      chart.update();
+      setChart(new D3Chart(chartArea.current));
     }
   }, [chart]);
 
-  return <div ref={chartContainer}></div>;
+  return <div className="chart-area" ref={chartArea}></div>;
 };
+
+export default ChartWrapper;
