@@ -57,7 +57,9 @@ export default function Home() {
           >
             {bandKeys.map((key) => (
               <>
-                <option value={key}>{key}</option>
+                <option value={key} key={key}>
+                  {key}
+                </option>
               </>
             ))}
           </select>
@@ -68,7 +70,9 @@ export default function Home() {
             onChange={(evt) => setQuery1(evt.target.value)}
           >
             {linearKeys.map((key) => (
-              <option value={key}>{key}</option>
+              <option value={key} key={key}>
+                {key}
+              </option>
             ))}
           </select>
         </div>
