@@ -113,6 +113,10 @@
   margin-left: 0.5rem;
 }
 
+.span {
+  padding: 0 16px;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;
